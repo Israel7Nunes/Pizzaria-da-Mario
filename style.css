@@ -1,0 +1,299 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+:root{
+    --colorBG: #B51111;
+    --color1: #6B0000;
+    --colortext1: #FFF283;
+    --color2: #FF970F;
+    --color3: #fff2f2;
+}
+
+body{
+    color: var(--colortext1);
+background: var(--colorBG);
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color1);
+    padding:0.5rem;
+    
+}
+
+.pizzaLogo img{
+    height: 3rem;
+    width:3rem;
+    
+}
+
+.mainTitle{
+    font-family: Gloria Hallelujah;
+    color: var(--color3);
+    
+}
+
+.containerHamb{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--colortext1);
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 7px;
+}
+
+
+.header{
+    font-family: Days One;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+.headerText{
+    font-family: Roboto;
+    font-size: 1.2rem;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 1em;
+    color: var(--color3);
+}
+
+
+
+
+.bAparecer button:hover{
+    background: var(--color1);
+    }
+
+.bAparecer{
+transform: translate(-50%);
+}
+
+.bAparecer{
+    text-align: center;
+    all: unset;
+    cursor: pointer;
+    background: var(--color2);
+    color: var(--color3);
+    font-family: Days One;
+    font-size: x-large;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 1rem;
+    margin-left:5rem;
+    margin-right: 5rem;
+    display: flex;
+    text-align: center;
+}
+
+
+/* parte do slideshow carrossel (lascou) */
+.slideshowContainer{
+    border-radius: 6px;
+    height: 100%;
+    width: 100%;
+    margin: 1rem;
+    overflow: hidden; /*o que passar disso é ignorado /*
+    /* altera a posição do elemento em questão e a distância relativa a mesma */
+    position:relative;
+    /* permite o uso das linhas a seguir: */
+    /*modifica a posição do eixo central */
+    
+
+}
+
+.imagem img{
+    display: flex;
+    justify-content: center;
+    height:100%;
+    width:100%;
+}
+
+/* a label pode ser representada e alterada pelo .bar, sendo o elemento filho da class navegacao */
+/* essa parte meio que cria um seletor de imagens que fica na parte inferior da mesma */
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color2);
+    width:50px;
+    height:15px;
+    margin:5px;
+    cursor: pointer;
+    transition: .5s ;
+    border-radius: 4px;
+    
+}
+
+.navegacao {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.bar:hover{
+    background: var(--color1)
+}
+
+input {
+    display: none;
+}
+
+.imagens{
+    /* arrumando o tamanho das imagens e colocando-as em lateral */
+    display:flex;
+    height:100%;
+    width:650%;
+
+    
+}
+
+.imagem{
+    /* divido pelo tanto de imagens que usamos, no caso 6. ou 100/6  */
+    width:16.6666666667%;
+    transition:all cubic-bezier(0.175, 0.885, 0.32, 0.700) 0.55s ;
+    
+    
+}
+
+/* ao selecionar uma id, colocar o # */
+/* o ~ é utilizado como ligação, ou seja aciona uma ação. */
+
+#imagem1:checked ~ .img1{
+    margin-left:0;
+}
+/* os valores colocados são negativos, já que queremos uma rolagem da direita pra esquerda */
+#imagem2:checked ~ .img1{
+    margin-left:-16.6666666667%;
+
+}
+
+#imagem3:checked ~ .img1{
+    margin-left:-33.3333333333%;
+
+}
+
+#imagem4:checked ~ .img1{
+    margin-left:-50%;
+}
+
+#imagem5:checked ~ .img1{
+    margin-left:-66.6666666667%;
+
+}
+
+#imagem6:checked ~ .img1{
+    margin-left:-83.3333333333%;
+
+}
+
+
+/* formulario pra pedir a pizza */
+
+.formularioPizza{
+    background: var(--color1);
+    border-radius: 7px;
+    margin: 0.5rem;
+    font-family: Days One;
+
+
+}
+
+
+.formularioPizza input{
+    all: unset;
+    margin: 1rem;
+outline: 3px #000;
+border-bottom: solid 2px #000;
+color: var(--colortext1);
+}
+
+.formularioPizza label{
+    margin-top: 0.3rem;
+    margin: 1rem;
+}
+
+.formularioPizza select{
+    margin: 1rem;
+}
+
+.formularioPizza option{
+    background:var(--color1);
+    color:var(--color3);
+}
+
+#fPagam{
+    all: unset;
+    margin: 1rem;
+    background: var(--color2);
+    border-radius: 4px;
+    color: var(--color3);
+    padding: 0.3rem;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.finalizar{
+    all: unset;
+
+    display: flex;
+    font-family: Days One;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    color: var(--color3);
+    border-bottom: none;
+    
+}
+
+footer{
+    margin:1rem;
+    text-align: center;
+    font-family: Roboto;
+
+}
+/* 
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Oculta o pop-up por padrão */
+    /* width: 300px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 100; /* Garante que o pop-up esteja acima de outros elementos 
+    }
+    */
+    
+/* #fecharPopUp {
+    float: right;
+    cursor: pointer;
+} */ 
+
+
+/** ooo ma ga **/
